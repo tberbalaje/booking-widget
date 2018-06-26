@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Booking Widget</title>
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking-widget.css">
+    <link rel="stylesheet" href="css/helpers.css">
+
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <div id="booking-tab1" class="tabs-content">
+        <div class="number-of-people">
+            <section>
+                <div class="form-group">
+                    <label for="" class="form-label">ご利用人数</label>
+                    <div class="dropdown-custom">
+                        <div class="input-custom">
+                            <button>大阪(伊丹</button>
+                            <div class="popup-menu">
+                                <div class="popup-content-input">
+                                    <ul class="cities">
+                                        <li><span target="Hokkaido" names="Hokkaido">1名</span></li>
+                                        <li><span target="Okinawa" names="Okinawa">2名</span></li>
+                                        <li><span target="Tochigi" names="Tochigi">3名</span></li>
+                                        <li><span target="Tokyo" names="Tokyo">4名</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="date-picker-tab1">
+            <label>チェックイン</label>
+            <div class="date-picker-tab1-container">
+                <div class="values">
+                    <div class="startDateContainer">
+                        <!--label チェックイン-->
+                        <div class="startDate">
+                            <div class="value date_at"><span class="date_at"></span>
+                                <input id="date_at" type="hidden" class="date_at" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="to">~</div>
+                    <div class="endDateContainer">
+                        <!--label チェックアウト-->
+                        <div class="endDate">
+                            <div class="value date_to"><span class="date_to"></span>
+                                <input id="date_to" type="hidden" class="date_to" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--.calendar-backdrop-->
+                <div class="calendar">
+                    <!--img.clear(src='/assets/narita/images/clear.svg' )-->
+                    <div class="button button-prev"></div>
+                    <div class="button button-next"></div>
+                    <div class="calendarContainer"></div>
+                    <div class="bottomLayer"><span class="daysFromTo">2018年00月00日 金曜日 ~ 2018年00月00日 金曜日</span>
+                        <div class="nights">10 金曜日</div>
+                        <!--.button.closePopup &#x5B8C;&#x4E86;-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="people">
+            <label>ご利用人数</label>
+            <div class="people-list">
+                <p>大人2名, 子供1名<span>１部屋</span></p>
+            </div>
+            <div class="popup-wrap popup-create">
+                <!--.overlay-->
+                <div class="big-popup people-list-popup">
+                    <div class="head-popup">
+                        <section class="grown-up">
+                            <div class="form-group">
+                                <label for="" class="form-label">大人</label>
+                                <div class="input-custom">
+                                    <button>0</button>
+                                    <div class="popup-menu">
+                                        <div class="popup-content-input">
+                                            <ul class="cities">
+                                                <li><span target="Hokkaido" names="Hokkaido">0人</span></li>
+                                                <li><span target="Okinawa" names="Okinawa">1人</span></li>
+                                                <li><span target="Tochigi" names="Tochigi">2人</span></li>
+                                                <li><span target="Tokyo" names="Tokyo">3人</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="children">
+                            <div class="form-group">
+                                <label for="" class="form-label">子供</label>
+                                <div class="input-custom">
+                                    <button>0</button>
+                                    <div class="popup-menu">
+                                        <div class="popup-content-input">
+                                            <ul class="cities">
+                                                <li><span target="Hokkaido" names="Hokkaido" value="0">0人</span></li>
+                                                <li><span target="Okinawa" names="Okinawa" value="1">1人</span></li>
+                                                <li><span target="Tochigi" names="Tochigi" value="2">2人</span></li>
+                                                <li><span target="Tokyo" names="Tokyo" value="3">3人</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="room">
+                            <div class="form-group">
+                                <label for="" class="form-label">部屋</label>
+                                <div class="input-custom">
+                                    <button>0</button>
+                                    <div class="popup-menu">
+                                        <div class="popup-content-input">
+                                            <ul class="cities">
+                                                <li><span target="Hokkaido" names="Hokkaido">0</span></li>
+                                                <li><span target="Okinawa" names="Okinawa">1</span></li>
+                                                <li><span target="Tochigi" names="Tochigi">2</span></li>
+                                                <li><span target="Tokyo" names="Tokyo">3</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="input-popup">
+                        <div class="title">小学生の添い寝について</div>
+                        <ul>
+                            <li>大人1名様に対し、添い寝のお子様1名までとします。</li>
+                            <li>小学生の添い寝希望のお客様がご朝食をご希望の場合、現地にて別途1,030円頂戴いたします。（未就学児は無料）</li>
+                            <li>小学生の添い寝の場合、幼児欄の「食事・布団不要」に人数をご入力の上、予約画面下の備考欄にお子様の年齢をご記載ください。</li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="clear">クリア</button>
+                        <button class="done">完了</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-code">
+            <section>
+                <div class="form-group">
+                    <label for="" class="form-label">プロモコード</label>
+                    <div class="input-custom">
+                        <input type="text" placeholder="プロモコード)" class="form-control" />
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="find-button">
+            <label class="visible-desktop"><i class="icon-info"></i><span>最低価格保証</span></label>
+            <button name="submit" type="submit" value="空室を検索">空室を検索</button>
+            <label class="visible-device"><i class="icon-info"></i><span>最低価格保証</span></label>
+        </div>
+    </div>
+    <!-- build:js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <!-- endbuild  -->
+</body>
+
+</html>
